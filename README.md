@@ -10,6 +10,14 @@ If you still have problems, set the LD_LIBRARY_PATH to the cuda and cudnn paths,
 export LD_LIBRARY_PATH="/path/to/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib
 ```
 
+or, using fish:
+
+```bash
+set -gx LD_LIBRARY_PATH "/path/to/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib"
+```
+
+since I'm using mamba, the libraries are located in `/path/to/mambaforge/envs/name_of_env/lib`
+
 <img width="1216" align="center" alt="whisperx-arch" src="figures/pipeline.png">
 
 <!-- <p align="left">Whisper-Based Automatic Speech Recognition (ASR) with improved timestamp accuracy + quality via forced phoneme alignment and voice-activity based batching for fast inference.</p> -->
