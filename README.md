@@ -1,4 +1,7 @@
-<h1 align="center">WhisperX</h1>
+<h1 align="center">BetterWhisperX</h1>
+
+This is a fork of [WhisperX](https://github.com/m-bain/whisperX) with some improvements. Unfortunatelly, the original author is not maintaining the project anymore.
+I'm working on this project to keep it alive and improve it in my free time, but I can't promise anything!
 
 ## Warning 🚨
 
@@ -166,14 +169,6 @@ print(diarize_segments)
 print(result["segments"]) # segments are now assigned speaker IDs
 ```
 
-## Demos 🚀
-
-[![Replicate (large-v3](https://img.shields.io/static/v1?label=Replicate+WhisperX+large-v3&message=Demo+%26+Cloud+API&color=blue)](https://replicate.com/victor-upmeet/whisperx)
-[![Replicate (large-v2](https://img.shields.io/static/v1?label=Replicate+WhisperX+large-v2&message=Demo+%26+Cloud+API&color=blue)](https://replicate.com/daanelson/whisperx)
-[![Replicate (medium)](https://img.shields.io/static/v1?label=Replicate+WhisperX+medium&message=Demo+%26+Cloud+API&color=blue)](https://replicate.com/carnifexer/whisperx)
-
-If you don't have access to your own GPUs, use the links above to try out WhisperX.
-
 <h2 align="left" id="whisper-mod">Technical Details 👷‍♂️</h2>
 
 For specific details on the batching and alignment, the effect of VAD, as well as the chosen alignment model, see the preprint [paper](https://www.robots.ox.ac.uk/~vgg/publications/2023/Bain23/bain23.pdf).
@@ -233,30 +228,8 @@ Bug finding and pull requests are also highly appreciated to keep this project g
 
 - [ ] Improve diarization (word level). _Harder than first thought..._
 
-<h2 align="left" id="contact">Contact/Support 📇</h2>
-
-Contact maxhbain@gmail.com for queries.
-
-<a href="https://www.buymeacoffee.com/maxhbain" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-<h2 align="left" id="acks">Acknowledgements 🙏</h2>
-
-This work, and my PhD, is supported by the [VGG (Visual Geometry Group)](https://www.robots.ox.ac.uk/~vgg/) and the University of Oxford.
-
-Of course, this is builds on [openAI's whisper](https://github.com/openai/whisper).
-Borrows important alignment code from [PyTorch tutorial on forced alignment](https://pytorch.org/tutorials/intermediate/forced_alignment_with_torchaudio_tutorial.html)
-And uses the wonderful pyannote VAD / Diarization [https://github.com/pyannote/pyannote-audio]
-
-Valuable VAD & Diarization Models from [pyannote audio](https://github.com/pyannote/pyannote-audio)
-
-Great backend from [faster-whisper](https://github.com/guillaumekln/faster-whisper) and [CTranslate2](https://github.com/OpenNMT/CTranslate2)
-
-Those who have [supported this work financially](https://www.buymeacoffee.com/maxhbain) 🙏
-
-Finally, thanks to the OS [contributors](https://github.com/m-bain/whisperX/graphs/contributors) of this project, keeping it going and identifying bugs.
-
-<h2 align="left" id="cite">Citation</h2>
-If you use this in your research, please cite the paper:
+<h2 align="left" id="cite">Citation 📚</h2>
+If you use this in your research, please cite the paper that started this project:
 
 ```bibtex
 @article{bain2022whisperx,
