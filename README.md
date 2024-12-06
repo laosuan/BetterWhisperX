@@ -4,6 +4,12 @@
 
 The ctranslate2 version was updated to 4.5.0, which is not compatible with cuda and cudnn 8.x. If you are using a **GOOGLE COLAB** GPU, please install ctranslate2 4.4.0. In any other case, please install the latest cuda and cudnn versions on your environment.
 
+If you still have problems, set the LD_LIBRARY_PATH to the cuda and cudnn paths, like this:
+
+```bash
+export LD_LIBRARY_PATH="/path/to/.venv/lib/python3.12/site-packages/nvidia/cudnn/lib
+```
+
 <img width="1216" align="center" alt="whisperx-arch" src="figures/pipeline.png">
 
 <!-- <p align="left">Whisper-Based Automatic Speech Recognition (ASR) with improved timestamp accuracy + quality via forced phoneme alignment and voice-activity based batching for fast inference.</p> -->
