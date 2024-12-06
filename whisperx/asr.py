@@ -396,6 +396,7 @@ def load_model(
         "clip_timestamps": None,
         "hallucination_silence_threshold": None,
         "hotwords": None,
+        "multilingual": False,
     }
 
     if asr_options is not None:
