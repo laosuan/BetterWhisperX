@@ -58,12 +58,15 @@ DEFAULT_ALIGN_MODELS_HF = {
     "hi": "theainerd/Wav2Vec2-large-xlsr-hindi",
     "ca": "softcatala/wav2vec2-large-xlsr-catala",
     "ml": "gvs/wav2vec2-large-xlsr-malayalam",
-    "no": "NbAiLab/nb-wav2vec2-1b-bokmaal",
-    "nn": "NbAiLab/nb-wav2vec2-300m-nynorsk",
+    "no": "NbAiLab/nb-wav2vec2-1b-bokmaal-v2",
+    "nn": "NbAiLab/nb-wav2vec2-1b-nynorsk",
     "sk": "comodoro/wav2vec2-xls-r-300m-sk-cv8",
     "sl": "anton-l/wav2vec2-large-xlsr-53-slovenian",
     "hr": "classla/wav2vec2-xls-r-parlaspeech-hr",
-    "cy": "Srulikbdd/Wav2Vec2-large-xlsr-welsh",
+    "ro": "gigant/romanian-wav2vec2",
+    "eu": "stefan-it/wav2vec2-large-xlsr-53-basque",
+    "gl": "ifrz/wav2vec2-large-xlsr-galician",
+    "ka": "xsway/wav2vec2-large-xlsr-georgian",
 }
 
 
@@ -75,8 +78,10 @@ def load_align_model(language_code, device, model_name=None, model_dir=None):
         elif language_code in DEFAULT_ALIGN_MODELS_HF:
             model_name = DEFAULT_ALIGN_MODELS_HF[language_code]
         else:
-            print(f"There is no default alignment model set for this language ({language_code}).\
-                Please find a wav2vec2.0 model finetuned on this language in https://huggingface.co/models, then pass the model name in --align_model [MODEL_NAME]")
+            print(
+                f"There is no default alignment model set for this language ({language_code}).\
+                Please find a wav2vec2.0 model finetuned on this language in https://huggingface.co/models, then pass the model name in --align_model [MODEL_NAME]"
+            )
             raise ValueError(f"No default align-model for language: {language_code}")
 
     if model_name in torchaudio.pipelines.__all__:
