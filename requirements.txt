@@ -1,5 +1,5 @@
 faster-whisper==1.0.3
-transformers~=4.47.0
+transformers
 pandas~=2.2.3
 setuptools>=75.6.0
 nltk~=3.9.1
