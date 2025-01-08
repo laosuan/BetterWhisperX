@@ -4,3 +4,5 @@ whisperx.egg-info/
 build/
 dist/
 .vscode/
+.DS_Store
+.mypy_cache/

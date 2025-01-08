@@ -1,7 +1,6 @@
 import math
-from typing import TextIO
 
-from conjunctions import get_comma, get_conjunctions
+from .conjunctions import get_comma, get_conjunctions
 
 
 def normal_round(n):
