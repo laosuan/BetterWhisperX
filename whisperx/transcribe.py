@@ -93,7 +93,7 @@ def cli():
     device: str = args.pop("device")
     device_index: int = args.pop("device_index")
     compute_type: str = args.pop("compute_type")
-
+    verbose: bool = args.pop("verbose")
     # model_flush: bool = args.pop("model_flush")
     os.makedirs(output_dir, exist_ok=True)
 
@@ -197,6 +197,7 @@ def cli():
             batch_size=batch_size,
             chunk_size=chunk_size,
             print_progress=print_progress,
+            verbose=verbose,
         )
         results.append((result, audio_path))
 

@@ -206,6 +206,7 @@ class FasterWhisperPipeline(Pipeline):
         chunk_size=30,
         print_progress=False,
         combined_progress=False,
+        verbose=False,
     ) -> TranscriptionResult:
         if isinstance(audio, str):
             audio = load_audio(audio)
@@ -276,6 +277,8 @@ class FasterWhisperPipeline(Pipeline):
             text = out["text"]
             if batch_size in [0, 1, None]:
                 text = text[0]
+            if verbose:
+                print(f"Transcript: [{round(vad_segments[idx]['start'], 3)} --> {round(vad_segments[idx]['end'], 3)}] {text}")
             segments.append(
                 {
                     "text": text,
