@@ -107,7 +107,7 @@ class FasterWhisperPipeline(Pipeline):
         model,
         vad,
         vad_params: dict,
-        options: NamedTuple,
+        options: faster_whisper.transcribe.TranscriptionOptions,
         tokenizer=None,
         device: Union[int, str, "torch.device"] = -1,
         framework="pt",
